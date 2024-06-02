@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>husnain</groupId>
+    <artifactId>ims-app</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <name>Inventory Management System - Application</name>
+    <description> A JavaFX inventory application system for a small manufacturing organization</description>
+    <modules>
+        <module>ims-app-ui</module>
+        <module>ims-app-model</module>
+        <module>ims-app-crud</module>
+        <module>ims-app-sample-data</module>
+    </modules>
+    <build>
+        <plugins>
+            <!--Generate JavaDoc by running "mvn compile javadoc:javadoc javadoc:aggregate"-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <noqualifier>all</noqualifier>
+                    <destDir>javadoc</destDir>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>aggregate</id>
+                        <goals>
+                            <goal>aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

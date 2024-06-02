@@ -1,0 +1,68 @@
+/* 
+    Created on : Jan 24, 2022, 7:32:21 PM
+    Author     : Husnain Arif
+*/
+
+/*A stylized pane with a border that's colored gray*/
+.main-pane {
+    /*A pale shade of gray */
+    -fx-border-color: #D3D3D3;
+    /*A radius that's approx. 24px*/
+    -fx-border-radius: 2em;
+}
+
+#partIdColumn,
+#productIdColumn,
+#assocPartIdColumn,
+#partInvLevelColumn,
+#productInvLevelColumn,
+#assocInvLevelColumn,
+#partPriceColumn,
+#productPriceColumn,
+#assocPriceColumn,
+#partIdColumn .label,
+#productIdColumn .label,
+#assocPartIdColumn .label,
+#partInvLevelColumn .label,
+#productInvLevelColumn .label,
+#assocInvLevelColumn .label,
+#partPriceColumn .label,
+#productPriceColumn .label,
+#assocPriceColumn .label {
+    -fx-alignment: CENTER_RIGHT
+}
+
+#partNameColumn,
+#productNameColumn,
+#assocPartNameColumn,
+#partNameColumn .label,
+#productNameColumn .label,
+#assocPartNameColumn .label {
+    -fx-alignment: CENTER_LEFT
+}
+
+#partIdColumn .label,
+#productIdColumn .label,
+#assocPartIdColumn .label,
+#partNameColumn .label,
+#productNameColumn .label,
+#assocPartNameColumn .label,
+#partInvLevelColumn .label,
+#productInvLevelColumn .label,
+#assocInvLevelColumn .label,
+#productPriceColumn .label,
+#partPriceColumn .label,
+#assocPriceColumn .label {
+    -fx-padding: 3px;
+}
+
+.input-error,
+.text-input:error {
+    -fx-base: derive(red, 99%);
+}
+
+.error-label {
+    -fx-text-fill: red;
+    -fx-alignment: CENTER_RIGHT;
+    -fx-max-width: Infinity;
+}

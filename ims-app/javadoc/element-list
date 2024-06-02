@@ -1,0 +1,11 @@
+module:ims.crud
+husnain.ims.app.crud
+husnain.ims.app.crud.utils
+module:ims.model
+husnain.ims.app.model
+module:ims.sample.data
+husnain.ims.app.sample.data
+module:ims.ui
+husnain.ims.app.ui
+husnain.ims.app.ui.controllers
+husnain.ims.app.ui.controllers.utils

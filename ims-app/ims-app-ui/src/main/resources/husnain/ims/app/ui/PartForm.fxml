@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<DialogPane minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <content>
+        <VBox spacing="24.0">
+            <children>
+                <GridPane hgap="12.0" vgap="12.0">
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="120.0" />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints valignment="TOP" />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="titleLabel" style="-fx-font-weight: 700;">
+                            <GridPane.margin>
+                                <Insets bottom="24.0" />
+                            </GridPane.margin>
+                        </Label>
+                        <RadioButton fx:id="inhouseRadioButton" mnemonicParsing="false" text="In-House" GridPane.columnIndex="1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="productTypeToggleGrp" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="outsourcedRadioButton" mnemonicParsing="false" text="Outsourced" toggleGroup="$productTypeToggleGrp" GridPane.columnIndex="2" GridPane.columnSpan="2147483647">
+                            <padding>
+                                <Insets left="24.0" />
+                            </padding>
+                        </RadioButton>
+                        <Label text="ID" GridPane.rowIndex="1" />
+                        <TextField fx:id="idTextField" disable="true" editable="false" style="-fx-font-style: italic;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Name" GridPane.rowIndex="2" />
+                        <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Inv" GridPane.rowIndex="3" />
+                        <TextField fx:id="stockTextField" styleClass="text-input" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Price/Cost" GridPane.rowIndex="4" />
+                        <TextField fx:id="priceTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Max" GridPane.rowIndex="5" />
+                        <TextField fx:id="maxStockTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Min" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                            <padding>
+                                <Insets left="24.0" />
+                            </padding>
+                        </Label>
+                        <TextField fx:id="minStockTextField" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label fx:id="companyOrMachineIdLabel" text="Company Name" GridPane.rowIndex="6" />
+                        <TextField fx:id="nameOrMachineIdTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                    </children>
+                </GridPane>
+                <Label fx:id="errorLabel" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: red;" VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+    </content>
+    <padding>
+        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+    </padding>
+</DialogPane>
